@@ -1,12 +1,11 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import {ParentModule} from './parent-with-module/parent-module';
+import {ParentStandalone} from './parent-standalone/parent-standalone';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [ParentModule, ParentStandalone],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App {
-  protected readonly title = signal('ng-neat-vitest-component-with-module-bug');
-}
+export class App {}
