@@ -11,7 +11,8 @@ describe('ParentWithModule component', () => {
 
   const createComponent = createComponentFactory({
     component: ParentWithModule,
-    imports: [ParentModule]
+    imports: [ParentModule],
+    declareComponent: false
   });
 
   beforeEach(() => {
